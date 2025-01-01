@@ -1,0 +1,21 @@
+# version: "3"
+services:
+  node-app:
+   build: 
+    context: .
+    args: 
+      NODE_ENV: development
+   volumes:
+    - ./:/app
+    - /app/node_modules
+   environment:
+    - NODE_ENV=development
+    - MONGO_USER=sidd
+    - MONGO_PASSWORD=ishu%40123
+
+   command: npm run dev
+
+  mongo-anyname:
+    environment:
+     - MONGO_INITDB_ROOT_USERNAME=sidd
+     - MONGO_INITDB_ROOT_PASSWORD=ishu@123

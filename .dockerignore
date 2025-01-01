@@ -1,0 +1,7 @@
+node_modules
+Dockerfile
+.dockerignore
+note.js
+.git
+.gitignore
+.some.jsx
